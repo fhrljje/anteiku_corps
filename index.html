@@ -1,50 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <style>
-    .background {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url(walp1.png), url(walp1.png);
-      background-position: 0 0, 100% 0;
-      background-repeat: no-repeat;
-      background-size: cover; /* Ubah ukuran background sesuai container */
-      background-attachment: fixed; /* Menjaga posisi background saat scrolling */
-      animation: background-animation 10s infinite linear;
-    }
-
-    @keyframes background-animation {
-      0% {
-        background-position: 0 0, 100% 0;
-      }
-      50% {
-        background-position: 100% 0, 0 0;
-      }
-      100% {
-        background-position: 0 0, 100% 0;
-      }
-    }
-    @media (max-width: 768px) {
-      .background {
-        background-size: 100% 100%;
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .background {
-        background-size: 100% auto;
-      }
-    }
-  </style>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="background"></div>
-    <!-- Add your content here -->
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizable Webpage</title>
+    <style>
+        body {
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            width: 800px;
+            height: 800px;
+            background-color: white;
+            border: 1px solid rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="logo" src="walp1.png" alt="Your logo">
+    </div>
+</body>
 </html>
