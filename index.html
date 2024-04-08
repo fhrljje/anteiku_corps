@@ -1,19 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anteiku Culture</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-</head>
-<body>
+  <style>
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url(walp1.png), url(walp1.png);
+      background-position: 0 0, 100% 0;
+      background-repeat: no-repeat;
+      background-size: cover; /* Ubah ukuran background sesuai container */
+      background-attachment: fixed; /* Menjaga posisi background saat scrolling */
+      animation: background-animation 10s infinite linear;
+    }
 
-<img src="images/walp1.png" alt="Background Image" style="display: none;">
+    @keyframes background-animation {
+      0% {
+        background-position: 0 0, 100% 0;
+      }
+      50% {
+        background-position: 100% 0, 0 0;
+      }
+      100% {
+        background-position: 0 0, 100% 0;
+      }
+    }
+    @media (max-width: 768px) {
+      .background {
+        background-size: 100% 100%;
+      }
+    }
 
-<div class="container">
-    <!-- <div class="rose"></div> -->
-    <h1 class="title">Anteiku Culture</h1>
-</div>
-
-</body>
+    @media (min-width: 1024px) {
+      .background {
+        background-size: 100% auto;
+      }
+    }
+  </style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="background"></div>
+    <!-- Add your content here -->
+  </body>
 </html>
